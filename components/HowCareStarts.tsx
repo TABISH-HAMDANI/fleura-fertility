@@ -49,8 +49,8 @@ const steps = [
 
 export default function HowCareStarts() {
   return (
-    <section className="bg-[#8B8B5F] py-[112px]">
-      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col gap-[80px] items-center">
+    <section className="bg-[#8B8B5F] py-14 lg:py-[112px]">
+      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col gap-10 lg:gap-[80px] items-center">
 
         <FadeIn>
           <div className="flex flex-col items-center text-center gap-4">
@@ -58,7 +58,7 @@ export default function HowCareStarts() {
               What You Get
             </p>
             <div className="flex flex-col items-center gap-2">
-              <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[48px] leading-[53px] tracking-[-1.2px] text-white text-center">
+              <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[28px] leading-[34px] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[53px] tracking-[-1.2px] text-white text-center">
                 How your care starts              </h2>
               <p className="font-['Manrope'] font-normal text-[18px] leading-[25px] tracking-[-1.2px] text-white text-center">
                 Your consultation is the starting point for a fully personalized treatment plan
@@ -74,7 +74,7 @@ export default function HowCareStarts() {
                 <FadeIn
                   key={step.title}
                   delay={i * 0.12}
-                  className="bg-[#8B8B5F] flex flex-col gap-3 py-12 pl-12 pr-6"
+                  className="bg-[#8B8B5F] flex flex-col gap-3 p-6 sm:p-8 lg:py-12 lg:pl-12 lg:pr-6"
                 >
                   <div className="w-7 h-7 shrink-0">
                     {step.icon}

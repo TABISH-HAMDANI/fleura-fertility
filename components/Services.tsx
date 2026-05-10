@@ -29,8 +29,9 @@ export default function Services() {
     <section id="services" className="bg-[#E2E5DE] py-20 lg:py-28">
       <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-16">
         <FadeIn>
-          <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[28px] leading-[34px] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[53px] tracking-[-1.2px] text-black text-center w-[689px] max-w-full">
-            Boutique Fertility Care provided with thoughtful, individualized care          </h2>
+          <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[28px] leading-[34px] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[53px] tracking-[-1.2px] text-black text-center mx-auto w-full lg:w-[689px]">
+            Boutique Fertility Care provided with thoughtful, individualized care
+          </h2>
         </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">

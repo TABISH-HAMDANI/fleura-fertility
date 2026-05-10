@@ -4,7 +4,7 @@ const navLinks = ["About", "Services", "Pricing", "Contact"];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#8B8B5F] pt-[80px] pb-[40px]">
+    <footer className="bg-[#8B8B5F] pt-12 pb-8 lg:pt-[80px] lg:pb-[40px]">
       <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col gap-6">
 
         {/* Main content row */}

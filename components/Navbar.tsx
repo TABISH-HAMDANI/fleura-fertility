@@ -21,12 +21,12 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="fixed top-0 left-0 right-0 z-50 bg-[#F2EAD5]"
     >
-      <div className="w-full max-w-[1402px] mx-auto px-4 sm:px-6 lg:px-16 flex flex-row items-center justify-between h-[84px]">
+      <div className="w-full px-4 sm:px-6 lg:px-16 flex flex-row items-center justify-between h-16 lg:h-[84px]">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <img src="/logo.svg" alt="Fleura Fertility" className="w-8 h-7" />
-          <span className="font-['Besley'] font-normal text-[24px] leading-[32px] tracking-[-0.6px] text-black">
+        <Link href="/" className="flex items-center gap-2 lg:gap-3 shrink-0">
+          <img src="/logo.svg" alt="Fleura Fertility" className="w-7 h-6 lg:w-8 lg:h-7" />
+          <span className="font-['Besley'] font-normal text-[20px] lg:text-[24px] leading-[28px] lg:leading-[32px] tracking-[-0.6px] text-black">
             Fleura Fertility
           </span>
         </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden p-1.5 text-black"
+          className="lg:hidden p-2 -mr-2 text-black"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
         >
@@ -72,18 +72,19 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
+            key="mobile-menu"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="lg:hidden bg-[#F2EAD5] border-t border-black/10 px-8 pb-5 pt-3"
+            className="lg:hidden overflow-hidden bg-[#F2EAD5] border-t border-black/10"
           >
-            <div className="flex flex-col gap-1">
+            <div className="px-4 sm:px-6 pb-5 pt-3 flex flex-col gap-1">
               {navLinks.map(({ href, label }) => (
                 <Link
                   key={label}
                   href={href}
-                  className="py-2.5 font-['Manrope'] font-normal text-[14px] tracking-[0.35px] text-[#6E6E6E] hover:text-black border-b border-black/8 last:border-0 transition-colors"
+                  className="py-2.5 font-['Manrope'] font-normal text-[14px] tracking-[0.35px] text-[#6E6E6E] hover:text-black border-b border-black/[0.08] last:border-0 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {label}
@@ -91,7 +92,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="#contact"
-                className="mt-3 flex justify-center px-5 py-2 bg-black text-white font-['Manrope'] font-normal text-[14px] rounded-full"
+                className="mt-3 flex justify-center px-5 py-2.5 bg-black text-white font-['Manrope'] font-normal text-[14px] rounded-full hover:bg-black/80 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Book a Consult

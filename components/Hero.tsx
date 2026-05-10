@@ -4,7 +4,7 @@ import FadeIn from "@/components/ui/FadeIn";
 export default function Hero() {
   return (
     <>
-      <section className="bg-[#F2EAD5] pt-[84px]">
+      <section className="bg-[#F2EAD5] pt-16 lg:pt-[84px]">
         <div className="w-full max-w-[1402px] mx-auto flex flex-col lg:flex-row items-center pl-4 sm:pl-8 lg:pl-16 pr-4 sm:pr-8 lg:pr-[122px] gap-10 lg:gap-16 py-10 lg:py-0 lg:min-h-[921px]">
 
           {/* Left — Text */}
@@ -27,17 +27,17 @@ export default function Hero() {
               </p>
             </FadeIn>
 
-            <FadeIn delay={0.35}>
-              <div className="flex flex-row flex-wrap items-start gap-4">
+            <FadeIn delay={0.35} className="w-full">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-4">
                 <Link
                   href="#contact"
-                  className="flex items-center justify-center w-[238px] h-[58px] bg-black text-white font-['Manrope'] font-normal text-[16px] leading-[24px] rounded-full hover:bg-black/80 transition-colors"
+                  className="flex items-center justify-center w-full sm:w-[238px] h-[58px] bg-black text-white font-['Manrope'] font-normal text-[16px] leading-[24px] rounded-full hover:bg-black/80 transition-colors"
                 >
                   Book your consultation
                 </Link>
                 <Link
                   href="#services"
-                  className="flex items-center justify-center w-[148px] h-[58px] border border-black/20 text-black font-['Manrope'] font-normal text-[16px] leading-[24px] rounded-full hover:bg-black/5 transition-colors"
+                  className="flex items-center justify-center w-full sm:w-[148px] h-[58px] border border-black/20 text-black font-['Manrope'] font-normal text-[16px] leading-[24px] rounded-full hover:bg-black/5 transition-colors"
                 >
                   Learn More
                 </Link>
@@ -62,7 +62,7 @@ export default function Hero() {
 
               {/* Right sub-column */}
               <div className="flex flex-col gap-4 flex-1">
-                <FadeIn delay={0.3} className="rounded-2xl overflow-hidden bg-[#D9C8B4] h-[298.66px]">
+                <FadeIn delay={0.3} className="rounded-2xl overflow-hidden bg-[#D9C8B4] h-[180px] lg:h-[298.66px]">
                   <img
                     src="/pexels-mart-production-7088525.jpg"
                     alt="Fertility consultation"
@@ -82,7 +82,7 @@ export default function Hero() {
             </div>
 
             {/* Bottom wide image */}
-            <FadeIn delay={0.5} className="w-full rounded-2xl overflow-hidden bg-[#C8B8A2] h-[246.84px]">
+            <FadeIn delay={0.5} className="w-full rounded-2xl overflow-hidden bg-[#C8B8A2] h-[160px] lg:h-[246.84px]">
               <img
                 src="/pexels-vera-arsic-304265-984939.jpg"
                 alt="Warm fertility consultation setting"

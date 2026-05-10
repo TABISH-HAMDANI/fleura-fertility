@@ -22,16 +22,16 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="contact" className="bg-[#DDA783] py-[112px]">
+    <section id="contact" className="bg-[#DDA783] py-14 lg:py-[112px]">
       <div className="w-full max-w-[1024px] mx-auto px-8">
-        <div className="flex flex-col lg:flex-row items-start gap-20">
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-20">
 
           {/* Left: copy */}
           <FadeIn direction="right" className="flex flex-col gap-4 lg:w-[426.66px] shrink-0">
             <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[2.8px] uppercase text-[#FFECE3]">
               Get Started
             </p>
-            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[48px] leading-[53px] tracking-[-1.2px] text-white">
+            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[28px] leading-[34px] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[53px] tracking-[-1.2px] text-white">
               Start your fertility plan
             </h2>
             <p className="font-['Manrope'] font-normal text-[18px] leading-[29px] text-white/90 max-w-[382px]">
@@ -109,7 +109,7 @@ export default function ContactCTA() {
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  className="w-full h-[282px] bg-white border border-white/20 rounded-[10px] px-4 py-3 font-['Manrope'] text-[14px] text-black placeholder-black/30 outline-none focus:border-white/50 transition-all resize-none"
+                  className="w-full h-[160px] sm:h-[220px] lg:h-[282px] bg-white border border-white/20 rounded-[10px] px-4 py-3 font-['Manrope'] text-[14px] text-black placeholder-black/30 outline-none focus:border-white/50 transition-all resize-none"
                 />
               </div>
 

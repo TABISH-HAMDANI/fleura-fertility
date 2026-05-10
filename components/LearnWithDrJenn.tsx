@@ -30,20 +30,21 @@ const videos = [
 
 export default function LearnWithDrJenn() {
   return (
-    <section className="bg-[#F2EAD5] py-[112px]">
-      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-16">
+    <section className="bg-[#F2EAD5] py-14 lg:py-[112px]">
+      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-10 lg:gap-16">
 
         {/* Header */}
-        <FadeIn>
-          <div className="flex flex-col items-center gap-4 w-[512px] max-w-full text-center">
+        <FadeIn className="w-full">
+          <div className="flex flex-col items-center gap-4 w-full text-center">
             <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[2.8px] uppercase text-[#DDA783]">
               Watch &amp; Learn
             </p>
-            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[48px] leading-[53px] tracking-[-1.2px] text-black text-center">
+            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[28px] leading-[34px] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[53px] tracking-[-1.2px] text-black text-center">
               Learn with Dr. Jenn
             </h2>
-            <p className="font-['Manrope'] font-normal text-[18px] leading-[28px] text-[#6E6E6E] text-center max-w-[470px]">
-              Educational videos to help you understand your options before starting and during treatment            </p>
+            <p className="font-['Manrope'] font-normal text-[16px] sm:text-[18px] leading-[26px] sm:leading-[28px] text-[#6E6E6E] text-center w-full max-w-[470px] mx-auto">
+              Educational videos to help you understand your options before starting and during treatment
+            </p>
           </div>
         </FadeIn>
 
@@ -54,7 +55,7 @@ export default function LearnWithDrJenn() {
               <div className="cursor-pointer">
 
                 {/* Thumbnail */}
-                <div className="relative rounded-[14px] overflow-hidden bg-black/5 mb-3" style={{ height: "135.56px" }}>
+                <div className="relative rounded-[14px] overflow-hidden bg-black/5 mb-3 h-[200px] sm:h-[155px] lg:h-[135.56px]">
                   <div className="absolute bottom-[7.56px] right-2 bg-black/80 text-white font-['Manrope'] font-normal text-[12px] leading-[16px] px-1.5 py-0.5 rounded">
                     {video.duration}
                   </div>
@@ -88,13 +89,13 @@ export default function LearnWithDrJenn() {
 
         {/* Bottom CTA */}
         <FadeIn>
-          <div className="flex flex-col items-center gap-4 w-[512px] max-w-full">
+          <div className="flex flex-col items-center gap-4 w-full sm:w-[512px] max-w-full">
             <p className="font-['Manrope'] font-normal text-[18px] leading-[28px] text-[#6E6E6E] text-center">
               Ready to apply this to your own fertility plan?
             </p>
             <Link
               href="#contact"
-              className="flex items-center justify-center w-[302px] h-[52px] bg-black text-white font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[1.4px] uppercase rounded-full hover:bg-black/80 transition-colors"
+              className="flex items-center justify-center w-full sm:w-[302px] h-[52px] bg-black text-white font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[1.4px] uppercase rounded-full hover:bg-black/80 transition-colors"
             >
               Book a Consultation
             </Link>
@@ -102,7 +103,7 @@ export default function LearnWithDrJenn() {
               href="https://youtube.com/@fleurafertility"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-[302px] h-[52px] border border-black text-black font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[1.4px] uppercase rounded-full hover:bg-black/5 transition-colors"
+              className="flex items-center justify-center gap-2 w-full sm:w-[302px] h-[52px] border border-black text-black font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[1.4px] uppercase rounded-full hover:bg-black/5 transition-colors"
             >
               <YouTubeIcon />
               View More on YouTube

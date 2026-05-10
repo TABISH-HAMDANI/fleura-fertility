@@ -35,8 +35,8 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#E2E5DE] py-[112px]">
-      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-16">
+    <section className="bg-[#E2E5DE] py-14 lg:py-[112px]">
+      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-10 lg:gap-16">
 
         {/* Header */}
         <FadeIn>
@@ -44,7 +44,7 @@ export default function Testimonials() {
             <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[2.8px] uppercase text-[#8B8B5F] text-center">
               Patient Stories
             </p>
-            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[48px] leading-[53px] tracking-[-1.2px] text-black text-center">
+            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[28px] leading-[34px] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[53px] tracking-[-1.2px] text-black text-center">
               What patients are saying
             </h2>
           </div>
@@ -54,7 +54,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {testimonials.map((t, i) => (
             <FadeIn key={t.name} delay={(i % 3) * 0.1}>
-              <div className="bg-white border border-black/[0.08] rounded-2xl pt-10 pb-10 pl-10 pr-0 flex flex-col gap-6 h-full">
+              <div className="bg-white border border-black/[0.08] rounded-2xl p-6 lg:pt-10 lg:pb-10 lg:pl-10 lg:pr-0 flex flex-col gap-6 h-full">
 
                 {/* Stars */}
                 <div className="flex flex-row gap-1">
@@ -64,12 +64,12 @@ export default function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <p className="font-['Manrope'] font-normal text-[16px] leading-[26px] text-black flex-1 pr-10">
+                <p className="font-['Manrope'] font-normal text-[16px] leading-[26px] text-black flex-1 pr-0 lg:pr-10">
                   &ldquo;{t.quote}&rdquo;
                 </p>
 
                 {/* Footer */}
-                <div className="border-t border-black/[0.08] pt-6 flex flex-col gap-1 pr-10">
+                <div className="border-t border-black/[0.08] pt-6 flex flex-col gap-1 pr-0 lg:pr-10">
                   <cite className="not-italic font-['Hedvig_Letters_Serif'] font-normal text-[18px] leading-[28px] text-black">
                     {t.name}
                   </cite>
