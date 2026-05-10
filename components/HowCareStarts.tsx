@@ -34,7 +34,7 @@ export default function HowCareStarts() {
               What You Get
             </p>
             <div>
-              <h2 className="font-serif font-normal text-[48px] leading-[52.8px] tracking-[-1.2px] text-white">
+              <h2 className="font-serif font-normal text-[clamp(2rem,4.5vw,3rem)] leading-[1.1] tracking-[-1.2px] text-white">
                 How your care starts
               </h2>
               <p className="font-sans font-normal text-[18px] text-white leading-normal">
@@ -51,7 +51,7 @@ export default function HowCareStarts() {
                 <FadeIn
                   key={step.title}
                   delay={i * 0.12}
-                  className="bg-[#8b8b5f] flex flex-col gap-3 pl-12 py-12 pr-8"
+                  className="bg-[#8b8b5f] flex flex-col gap-3 pl-6 py-8 pr-6 sm:pl-12 sm:py-12 sm:pr-8"
                 >
                   <div className="size-7 shrink-0">
                     <img

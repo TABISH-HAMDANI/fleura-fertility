@@ -4,7 +4,7 @@ import FadeIn from "@/components/ui/FadeIn";
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-[#F2EAD5] flex items-center pt-[72px]">
-      <div className="w-full max-w-[1440px] mx-auto px-8 py-16 lg:py-24">
+      <div className="w-full max-w-[1440px] mx-auto px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
 
           {/* Left — Text */}

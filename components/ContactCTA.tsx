@@ -62,7 +62,7 @@ export default function ContactCTA() {
           {/* Right: form */}
           <FadeIn delay={0.15}>
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="tel"
                   name="phone"

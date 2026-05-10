@@ -12,14 +12,14 @@ export default function WhoIsFor() {
   return (
     <section id="about" className="bg-[#f2ead5] py-[112px]">
       <div className="w-full max-w-[1024px] mx-auto px-8">
-        <div className="flex flex-col lg:flex-row gap-[80px] items-start">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-[80px] items-start">
 
           {/* Left */}
           <FadeIn direction="right" className="lg:sticky lg:top-32 shrink-0">
             <p className="font-sans font-normal text-[14px] text-[#8b8b5f] tracking-[2.8px] uppercase leading-5 mb-4">
               Is This You?
             </p>
-            <h2 className="font-serif font-normal text-[48px] leading-[52.8px] tracking-[-1.2px] text-black">
+            <h2 className="font-serif font-normal text-[clamp(2rem,4.5vw,3rem)] leading-[1.1] tracking-[-1.2px] text-black">
               Who this
               <br />
               is for
