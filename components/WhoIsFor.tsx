@@ -10,16 +10,16 @@ const items = [
 
 export default function WhoIsFor() {
   return (
-    <section id="about" className="bg-[#f2ead5] py-[112px]">
+    <section id="about" className="bg-[#E2E5DE] py-[112px]">
       <div className="w-full max-w-[1024px] mx-auto px-8">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-[80px] items-start">
 
           {/* Left */}
-          <FadeIn direction="right" className="lg:sticky lg:top-32 shrink-0">
-            <p className="font-sans font-normal text-[14px] text-[#8b8b5f] tracking-[2.8px] uppercase leading-5 mb-4">
+          <FadeIn direction="right" className="lg:sticky lg:top-32 shrink-0 lg:w-[426.66px] flex flex-col gap-4">
+            <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[2.8px] uppercase text-[#8B8B5F]">
               Is This You?
             </p>
-            <h2 className="font-serif font-normal text-[clamp(2rem,4.5vw,3rem)] leading-[1.1] tracking-[-1.2px] text-black">
+            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[48px] leading-[53px] tracking-[-1.2px] text-black">
               Who this
               <br />
               is for
@@ -30,13 +30,13 @@ export default function WhoIsFor() {
           <div className="flex flex-col flex-1">
             {items.map((item, i) => (
               <FadeIn key={item.n} delay={i * 0.08}>
-                <div className="group flex gap-6 items-center border-b border-[rgba(0,0,0,0.1)] py-[26px] rounded-xl hover:bg-black/[0.03] transition-colors duration-300 cursor-default">
-                  <div className="bg-[#8b8b5f] rounded-full size-9 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <span className="font-serif font-normal text-[16px] text-white leading-6">
+                <div className={`flex gap-6 items-center py-[26px] ${i < items.length - 1 ? "border-b border-black/10" : ""}`}>
+                  <div className="bg-[#8B8B5F] rounded-full w-9 h-9 flex items-center justify-center shrink-0">
+                    <span className="font-['Hedvig_Letters_Serif'] font-normal text-[16px] leading-[24px] text-white">
                       {item.n}
                     </span>
                   </div>
-                  <p className="font-sans font-normal text-[18px] text-black leading-[29.25px]">
+                  <p className="font-['Manrope'] font-normal text-[18px] leading-[29px] text-black">
                     {item.text}
                   </p>
                 </div>

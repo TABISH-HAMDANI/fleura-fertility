@@ -1,5 +1,4 @@
 import FadeIn from "@/components/ui/FadeIn";
-import MotionCard from "@/components/ui/MotionCard";
 
 const testimonials = [
   {
@@ -28,7 +27,7 @@ const testimonials = [
     type: "IVF Patient, NJ",
   },
   {
-    quote: "As someone with low AMH who was told to hurry up, Dr. Jenn was the first doctor who actually explained my options without making me panic. Life-changing consult.",
+    quote: "As someone with low AMH who was told to 'hurry up,' Dr. Jenn was the first doctor who actually explained my options without making me panic. Life-changing consult.",
     name: "Amy W.",
     type: "Egg Freezing Patient",
   },
@@ -36,44 +35,66 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-mist py-20 lg:py-28">
-      <div className="w-full max-w-[1440px] mx-auto px-8">
+    <section className="bg-[#E2E5DE] py-[112px]">
+      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-16">
+
+        {/* Header */}
         <FadeIn>
-          <div className="text-center mb-12 lg:mb-16">
-            <p className="font-serif italic text-[12px] tracking-[0.28em] text-black/40 uppercase mb-4">
+          <div className="flex flex-col items-center gap-4">
+            <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[2.8px] uppercase text-[#8B8B5F] text-center">
               Patient Stories
             </p>
-            <h2 className="font-serif font-normal text-[clamp(1.75rem,3.5vw,2.7rem)] leading-[52.8px] tracking-[-1.2px] text-black">
+            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[48px] leading-[53px] tracking-[-1.2px] text-black text-center">
               What patients are saying
             </h2>
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+        {/* Quote grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {testimonials.map((t, i) => (
             <FadeIn key={t.name} delay={(i % 3) * 0.1}>
-              <MotionCard className="bg-white border border-black/10 rounded-2xl p-6 h-full flex flex-col">
-                <div className="flex gap-0.5 mb-4">
+              <div className="bg-white border border-black/[0.08] rounded-2xl pt-10 pb-10 pl-10 pr-0 flex flex-col gap-6 h-full">
+
+                {/* Stars */}
+                <div className="flex flex-row gap-1">
                   {Array.from({ length: 5 }).map((_, s) => (
-                    <svg key={s} className="w-4 h-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
+                    <StarIcon key={s} />
                   ))}
                 </div>
 
-                <p className="font-sans text-[14px] text-black leading-relaxed flex-1 mb-5">
+                {/* Quote */}
+                <p className="font-['Manrope'] font-normal text-[16px] leading-[26px] text-black flex-1 pr-10">
                   &ldquo;{t.quote}&rdquo;
                 </p>
 
-                <div className="pt-4 border-t border-black/8">
-                  <p className="font-sans font-semibold text-[13px] text-black">{t.name}</p>
-                  <p className="font-sans text-[12px] text-gray mt-0.5">{t.type}</p>
+                {/* Footer */}
+                <div className="border-t border-black/[0.08] pt-6 flex flex-col gap-1 pr-10">
+                  <cite className="not-italic font-['Hedvig_Letters_Serif'] font-normal text-[18px] leading-[28px] text-black">
+                    {t.name}
+                  </cite>
+                  <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] text-[#6E6E6E]">
+                    {t.type}
+                  </p>
                 </div>
-              </MotionCard>
+
+              </div>
             </FadeIn>
           ))}
         </div>
+
       </div>
     </section>
+  );
+}
+
+function StarIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M8 1.33L9.71 5.83L14.5 6.18L10.97 9.22L12.09 13.87L8 11.42L3.91 13.87L5.03 9.22L1.5 6.18L6.29 5.83L8 1.33Z"
+        fill="#DDA783"
+      />
+    </svg>
   );
 }

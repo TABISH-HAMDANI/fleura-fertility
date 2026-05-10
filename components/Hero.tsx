@@ -3,50 +3,41 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#F2EAD5] flex items-center pt-[72px]">
-      <div className="w-full max-w-[1440px] mx-auto px-8 py-12 lg:py-20">
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
+    <>
+      <section className="bg-[#F2EAD5] pt-[84px]">
+        <div className="w-full max-w-[1402px] mx-auto flex flex-col lg:flex-row items-center pl-4 sm:pl-8 lg:pl-16 pr-4 sm:pr-8 lg:pr-[122px] gap-10 lg:gap-16 py-10 lg:py-0 lg:min-h-[921px]">
 
           {/* Left — Text */}
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start py-8 gap-8 w-full lg:w-[576px] shrink-0">
             <FadeIn delay={0.05}>
-              <div className="inline-flex items-center gap-2 mb-7">
-                <span className="font-serif text-[14px] tracking-[2.8px] text-[#DDA783]">                  Boutique Fertility Consultations
-                </span>
-              </div>
+              <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[2.8px] uppercase text-[#DDA783]">
+                Boutique Fertility Consultations
+              </p>
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <h1
-                className="font-serif font-normal text-[clamp(2rem,3.5vw,3.3rem)] leading-[52.8px] tracking-[-1.2px] text-black mb-6"
-              >
-                Personalized
-                <br />
-                care for your
-                <br />
-                <em className="italic text-[#B9794E]">fertility journey</em>
+              <h1 className="font-['Hedvig_Letters_Serif'] font-normal text-[38px] leading-[42px] sm:text-[52px] sm:leading-[56px] lg:text-[72px] lg:leading-[76px] tracking-[-1.8px] text-black max-w-[544px]">
+                Personalized<br />care for your <span className="text-[#B9794E]">fertility journey</span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.25}>
-              <p className="font-sans text-[15px] lg:text-base text-[#6E6E6E] leading-relaxed mb-9 max-w-[460px]">
-                Thoughtful, individualized fertility care from diagnosis through
-                treatment — not assembly-line medicine. Including IUI, IVF, egg
-                freezing and complex case care.
+              <p className="font-['Manrope'] font-normal text-[20px] leading-[32px] text-[#6E6E6E] max-w-[576px]">
+                Thoughtful, indivualized fertility care from diagnosis through treatment not assembly line medicine including IUI, IVF, egg freezing and complex case care.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.35}>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-row flex-wrap items-start gap-4">
                 <Link
                   href="#contact"
-                  className="inline-flex items-center px-7 py-3.5 bg-black text-white text-[13px] font-sans font-semibold rounded-full hover:bg-black/75 transition-all duration-200"
+                  className="flex items-center justify-center w-[238px] h-[58px] bg-black text-white font-['Manrope'] font-normal text-[16px] leading-[24px] rounded-full hover:bg-black/80 transition-colors"
                 >
                   Book your consultation
                 </Link>
                 <Link
                   href="#services"
-                  className="inline-flex items-center px-7 py-3.5 border border-black/25 text-black text-[13px] font-sans font-semibold rounded-full hover:border-black hover:bg-black/5 transition-all duration-200"
+                  className="flex items-center justify-center w-[148px] h-[58px] border border-black/20 text-black font-['Manrope'] font-normal text-[16px] leading-[24px] rounded-full hover:bg-black/5 transition-colors"
                 >
                   Learn More
                 </Link>
@@ -55,23 +46,59 @@ export default function Hero() {
           </div>
 
           {/* Right — Image mosaic */}
-          <div className="grid grid-cols-2 gap-3 lg:gap-4">
-            <FadeIn delay={0.25} className="row-span-2 rounded-2xl overflow-hidden bg-gradient-to-br from-[#DDA783] via-[#C88A60] to-[#A86840] min-h-[320px] lg:min-h-[420px] relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            </FadeIn>
-            <FadeIn delay={0.38} className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#EDD5C0] via-[#D9B898] to-[#C89A78] aspect-square relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-10 h-10 text-white/40" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 22C12 22 2 14 2 7C2 4 6 2 10 4C11 4.5 11.5 5 12 5.5C12.5 5 13 4.5 14 4C18 2 22 4 22 7C22 14 12 22 12 22Z" />
-                </svg>
+          <div className="flex flex-col gap-4 w-full lg:w-[576px] shrink-0">
+
+            {/* Top row: tall left + stacked right */}
+            <div className="flex flex-row gap-4 h-[360px] lg:h-[538.66px]">
+
+              {/* Tall left image */}
+              <FadeIn delay={0.2} className="w-1/2 sm:w-[280px] shrink-0 rounded-2xl overflow-hidden bg-[#C8B8A2]">
+                <img
+                  src="/pexels-olly-720598.jpg"
+                  alt="Peaceful expectant mother in natural light"
+                  className="w-full h-full object-cover"
+                />
+              </FadeIn>
+
+              {/* Right sub-column */}
+              <div className="flex flex-col gap-4 flex-1">
+                <FadeIn delay={0.3} className="rounded-2xl overflow-hidden bg-[#D9C8B4] h-[298.66px]">
+                  <img
+                    src="/pexels-mart-production-7088525.jpg"
+                    alt="Fertility consultation"
+                    className="w-full h-full object-cover"
+                  />
+                </FadeIn>
+
+                {/* Orange accent box */}
+                <FadeIn delay={0.4} className="flex items-center justify-center bg-[#DDA783] rounded-2xl flex-1">
+                  <svg width="80" height="73" viewBox="0 0 80 73" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M40 8C40 8 16 20 16 40C16 52 26 60 40 60C54 60 64 52 64 40C64 20 40 8 40 8Z" fill="rgba(255,255,255,0.3)" />
+                    <circle cx="40" cy="40" r="10" fill="rgba(255,255,255,0.3)" />
+                    <path d="M40 18V62M22 28L58 52M58 28L22 52" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                  </svg>
+                </FadeIn>
               </div>
-            </FadeIn>
-            <FadeIn delay={0.5} className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#C4BAA0] via-[#A89A80] to-[#8A7C60] aspect-square relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/10" />
+            </div>
+
+            {/* Bottom wide image */}
+            <FadeIn delay={0.5} className="w-full rounded-2xl overflow-hidden bg-[#C8B8A2] h-[246.84px]">
+              <img
+                src="/pexels-vera-arsic-304265-984939.jpg"
+                alt="Warm fertility consultation setting"
+                className="w-full h-full object-cover"
+              />
             </FadeIn>
           </div>
+
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Section divider */}
+      <div
+        className="w-full h-px"
+        style={{ background: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)" }}
+      />
+    </>
   );
 }

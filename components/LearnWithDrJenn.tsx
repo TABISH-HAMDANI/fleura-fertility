@@ -1,31 +1,26 @@
-import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
 
 const videos = [
   {
-    thumb: "",
     title: "AMH Levels Explained: When Should You Actually Worry?",
     duration: "14:32",
     views: "128K views",
     timeAgo: "2 weeks ago",
   },
   {
-    thumb: "",
     title: "IVF vs. Egg Freezing: Which Is Right for You?",
     duration: "22:05",
     views: "95K views",
     timeAgo: "1 month ago",
   },
   {
-    thumb: "",
     title: "Understanding Your Fertility Labs: FSH, LH & More",
     duration: "18:47",
     views: "74K views",
     timeAgo: "1 month ago",
   },
   {
-    thumb: "",
     title: "What to Do Before Trying to Get Pregnant",
     duration: "11:20",
     views: "210K views",
@@ -35,86 +30,96 @@ const videos = [
 
 export default function LearnWithDrJenn() {
   return (
-    <section className="bg-[#F2EAD5] py-20 lg:py-28">
-      <div className="w-full max-w-[1440px] mx-auto px-8">
+    <section className="bg-[#F2EAD5] py-[112px]">
+      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-16">
 
+        {/* Header */}
         <FadeIn>
-          <div className="text-center mb-12 lg:mb-16">
-            <p className="font-serif italic text-[12px] tracking-[0.28em] text-black/40 uppercase mb-4">
+          <div className="flex flex-col items-center gap-4 w-[512px] max-w-full text-center">
+            <p className="font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[2.8px] uppercase text-[#DDA783]">
               Watch &amp; Learn
             </p>
-            <h2 className="font-serif font-normal text-[clamp(1.75rem,3.5vw,2.7rem)] leading-[52.8px] tracking-[-1.2px] text-black mb-3">
+            <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[48px] leading-[53px] tracking-[-1.2px] text-black text-center">
               Learn with Dr. Jenn
             </h2>
-            <p className="font-sans text-[14px] text-[#6E6E6E] max-w-md mx-auto leading-relaxed">
-              Educational videos to help you understand your options before starting and during treatment
-            </p>
+            <p className="font-['Manrope'] font-normal text-[18px] leading-[28px] text-[#6E6E6E] text-center max-w-[470px]">
+              Educational videos to help you understand your options before starting and during treatment            </p>
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px] mb-10 lg:mb-12">
+        {/* Video grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
           {videos.map((video, i) => (
             <FadeIn key={video.title} delay={i * 0.09}>
-              <div className="group cursor-pointer">
-                <div className="relative rounded-xl overflow-hidden aspect-video mb-3 bg-[#E2E5DE]">
-                  {video.thumb && (
-                    <Image
-                      src={video.thumb}
-                      alt={video.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 22vw"
-                    />
-                  )}
-                  <div className="absolute bottom-2 right-2 bg-black/70 text-white text-[11px] font-sans font-medium px-1.5 py-0.5 rounded z-10">
+              <div className="cursor-pointer">
+
+                {/* Thumbnail */}
+                <div className="relative rounded-[14px] overflow-hidden bg-black/5 mb-3" style={{ height: "135.56px" }}>
+                  <div className="absolute bottom-[7.56px] right-2 bg-black/80 text-white font-['Manrope'] font-normal text-[12px] leading-[16px] px-1.5 py-0.5 rounded">
                     {video.duration}
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center z-10">
-                    <div className="w-11 h-11 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/35 transition-all duration-200 border border-white/30">
-                      <svg className="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5.14v14l11-7-11-7z" />
-                      </svg>
+                </div>
+
+                {/* Info row */}
+                <div className="flex items-start gap-3">
+                  {/* Avatar */}
+                  <div className="w-9 h-9 rounded-full bg-[#E2E5DE] shrink-0" />
+
+                  {/* Text */}
+                  <div className="flex flex-col gap-1">
+                    <p className="font-['Manrope'] font-normal text-[14px] leading-[19px] text-black">
+                      {video.title}
+                    </p>
+                    <p className="font-['Manrope'] font-normal text-[12px] leading-[20px] text-[#6E6E6E]">
+                      Dr. Jenn — Fleura Fertility
+                    </p>
+                    <div className="flex items-center gap-1">
+                      <span className="font-['Manrope'] font-normal text-[12px] leading-[16px] text-[#6E6E6E]">{video.views}</span>
+                      <span className="font-['Manrope'] font-normal text-[12px] leading-[16px] text-[#6E6E6E]">·</span>
+                      <span className="font-['Manrope'] font-normal text-[12px] leading-[16px] text-[#6E6E6E]">{video.timeAgo}</span>
                     </div>
                   </div>
                 </div>
-                <h3 className="font-sans font-semibold text-[13.5px] text-black leading-snug mb-1 group-hover:text-[#B9794E] transition-colors duration-200">
-                  {video.title}
-                </h3>
-                <p className="font-sans text-[12px] text-[#6E6E6E]">Dr. Jenn · Fleura Fertility</p>
-                <p className="font-sans text-[12px] text-black/40 mt-0.5">{video.views} · {video.timeAgo}</p>
+
               </div>
             </FadeIn>
           ))}
         </div>
 
+        {/* Bottom CTA */}
         <FadeIn>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col items-center gap-4 w-[512px] max-w-full">
+            <p className="font-['Manrope'] font-normal text-[18px] leading-[28px] text-[#6E6E6E] text-center">
+              Ready to apply this to your own fertility plan?
+            </p>
             <Link
               href="#contact"
-              className="inline-flex items-center px-8 py-3.5 bg-black text-white text-[13px] font-sans font-semibold rounded-full tracking-wide hover:bg-black/75 transition-all duration-200"
+              className="flex items-center justify-center w-[302px] h-[52px] bg-black text-white font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[1.4px] uppercase rounded-full hover:bg-black/80 transition-colors"
             >
-              BOOK A CONSULTATION
+              Book a Consultation
             </Link>
             <Link
-              href="https://youtube.com"
+              href="https://youtube.com/@fleurafertility"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-black/20 text-black text-[13px] font-sans font-semibold rounded-full hover:border-black hover:bg-black/5 transition-all duration-200"
+              className="flex items-center justify-center gap-2 w-[302px] h-[52px] border border-black text-black font-['Manrope'] font-normal text-[14px] leading-[20px] tracking-[1.4px] uppercase rounded-full hover:bg-black/5 transition-colors"
             >
-              <YouTubeIcon className="w-5 h-5 text-[#FF0000]" />
-              VIEW MORE ON YOUTUBE
+              <YouTubeIcon />
+              View More on YouTube
             </Link>
           </div>
         </FadeIn>
+
       </div>
     </section>
   );
 }
 
-function YouTubeIcon({ className }: { className?: string }) {
+function YouTubeIcon() {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="20" height="14" rx="3" fill="#EF0000" />
+      <path d="M8 4L14 7L8 10V4Z" fill="white" />
     </svg>
   );
 }

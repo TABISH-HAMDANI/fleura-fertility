@@ -27,37 +27,32 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="bg-[#E2E5DE] py-20 lg:py-28">
-      <div className="w-full max-w-[1440px] mx-auto px-8">
+      <div className="w-full max-w-[1024px] mx-auto px-8 flex flex-col items-center gap-16">
         <FadeIn>
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="font-serif font-normal text-[clamp(1.75rem,3.5vw,2.6rem)] leading-[52.8px] tracking-[-1.2px] text-black max-w-xl mx-auto">
-              Boutique Fertility Care provided with thoughtful, individualized care
-            </h2>
-          </div>
+          <h2 className="font-['Hedvig_Letters_Serif'] font-normal text-[28px] leading-[34px] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[53px] tracking-[-1.2px] text-black text-center w-[689px] max-w-full">
+            Boutique Fertility Care provided with thoughtful, individualized care          </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
-              <MotionCard className="bg-white border border-black/[0.08] rounded-2xl pt-[33px] pb-[58px] px-px flex flex-col items-center text-center gap-5">
+              <MotionCard className="bg-white border border-black/[0.08] rounded-2xl py-8 flex flex-col items-center text-center gap-5 min-h-[300.75px]">
 
-                {/* Icon circle with cream bg */}
-                <div className="bg-[#f2ead5] rounded-full size-14 flex items-center justify-center shrink-0">
+                <div className="bg-[#F2EAD5] rounded-full w-14 h-14 flex items-center justify-center shrink-0">
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="size-7 object-contain"
+                    className="w-7 h-7 object-contain"
                   />
                 </div>
 
-                {/* Peach divider */}
-                <div className="w-8 h-px bg-[rgba(221,167,131,0.5)]" />
+                <div className="w-8 border-t border-[rgba(221,167,131,0.5)]" />
 
-                <h3 className="font-serif font-normal text-[18px] text-black leading-snug">
+                <h3 className="font-['Hedvig_Letters_Serif'] font-normal text-[18px] leading-[25px] text-black text-center w-[172px]">
                   {service.title}
                 </h3>
 
-                <p className="font-sans text-[14px] text-[#6e6e6e] leading-[22.75px] w-[161px]">
+                <p className="font-['Manrope'] font-normal text-[14px] leading-[23px] text-[#6E6E6E] text-center w-[172px]">
                   {service.description}
                 </p>
               </MotionCard>
