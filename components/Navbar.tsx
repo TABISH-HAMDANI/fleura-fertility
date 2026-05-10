@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -21,7 +22,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
+    <motion.header
+      initial={{ opacity: 0, y: -16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
         ? "bg-transparent backdrop-blur-md border-b border-black/10 shadow-sm"
         : "bg-transparent"
@@ -75,31 +79,39 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-black/10 px-6 pb-5 pt-3">
-            <div className="flex flex-col gap-1">
-              {navLinks.map(({ href, label }) => (
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-black/10 px-6 pb-5 pt-3"
+            >
+              <div className="flex flex-col gap-1">
+                {navLinks.map(({ href, label }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="py-2.5 text-sm font-sans text-gray hover:text-black border-b border-black/8 last:border-0"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {label}
+                  </Link>
+                ))}
                 <Link
-                  key={label}
-                  href={href}
-                  className="py-2.5 text-sm font-sans text-gray hover:text-black border-b border-black/8 last:border-0"
+                  href="#contact"
+                  className="mt-3 flex justify-center px-5 py-2.5 bg-stone text-cream text-sm font-sans font-medium rounded-full"
                   onClick={() => setIsOpen(false)}
                 >
-                  {label}
+                  Book a Consult
                 </Link>
-              ))}
-              <Link
-                href="#contact"
-                className="mt-3 flex justify-center px-5 py-2.5 bg-stone text-cream text-sm font-sans font-medium rounded-full"
-                onClick={() => setIsOpen(false)}
-              >
-                Book a Consult
-              </Link>
-            </div>
-          </div>
-        )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function ContactCTA() {
@@ -116,12 +117,14 @@ export default function ContactCTA() {
                 </span>
               </label>
 
-              <button
+              <motion.button
+                whileTap={{ scale: 0.98 }}
+                transition={{ duration: 0.1 }}
                 type="submit"
                 className="mt-1 w-full py-4 bg-black text-white font-sans font-semibold text-[13px] rounded-xl hover:bg-black/75 transition-all duration-200 tracking-wide"
               >
                 Submit Request
-              </button>
+              </motion.button>
             </form>
           </FadeIn>
         </div>

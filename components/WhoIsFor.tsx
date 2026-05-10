@@ -30,8 +30,8 @@ export default function WhoIsFor() {
           <div className="flex flex-col flex-1">
             {items.map((item, i) => (
               <FadeIn key={item.n} delay={i * 0.08}>
-                <div className="flex gap-6 items-center border-b border-[rgba(0,0,0,0.1)] py-[26px]">
-                  <div className="bg-[#8b8b5f] rounded-full size-9 flex items-center justify-center shrink-0">
+                <div className="group flex gap-6 items-center border-b border-[rgba(0,0,0,0.1)] py-[26px] rounded-xl hover:bg-black/[0.03] transition-colors duration-300 cursor-default">
+                  <div className="bg-[#8b8b5f] rounded-full size-9 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <span className="font-serif font-normal text-[16px] text-white leading-6">
                       {item.n}
                     </span>

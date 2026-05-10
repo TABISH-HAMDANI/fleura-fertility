@@ -55,21 +55,21 @@ export default function Hero() {
           </div>
 
           {/* Right — Image mosaic */}
-          <FadeIn delay={0.2} direction="left" className="grid grid-cols-2 gap-3 lg:gap-4">
-            <div className="row-span-2 rounded-2xl overflow-hidden bg-gradient-to-br from-[#DDA783] via-[#C88A60] to-[#A86840] min-h-[320px] lg:min-h-[420px] relative">
+          <div className="grid grid-cols-2 gap-3 lg:gap-4">
+            <FadeIn delay={0.25} className="row-span-2 rounded-2xl overflow-hidden bg-gradient-to-br from-[#DDA783] via-[#C88A60] to-[#A86840] min-h-[320px] lg:min-h-[420px] relative">
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            </div>
-            <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#EDD5C0] via-[#D9B898] to-[#C89A78] aspect-square relative">
+            </FadeIn>
+            <FadeIn delay={0.38} className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#EDD5C0] via-[#D9B898] to-[#C89A78] aspect-square relative">
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-10 h-10 text-white/40" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 22C12 22 2 14 2 7C2 4 6 2 10 4C11 4.5 11.5 5 12 5.5C12.5 5 13 4.5 14 4C18 2 22 4 22 7C22 14 12 22 12 22Z" />
                 </svg>
               </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#C4BAA0] via-[#A89A80] to-[#8A7C60] aspect-square relative">
+            </FadeIn>
+            <FadeIn delay={0.5} className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#C4BAA0] via-[#A89A80] to-[#8A7C60] aspect-square relative">
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/10" />
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
         </div>
       </div>
     </section>

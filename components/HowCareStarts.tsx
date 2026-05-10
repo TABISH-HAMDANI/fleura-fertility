@@ -47,9 +47,10 @@ export default function HowCareStarts() {
         <FadeIn className="w-full">
           <div className="bg-[rgba(255,255,255,0.15)] border border-[rgba(255,255,255,0.15)] rounded-2xl overflow-hidden w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
-              {steps.map((step) => (
-                <div
+              {steps.map((step, i) => (
+                <FadeIn
                   key={step.title}
+                  delay={i * 0.12}
                   className="bg-[#8b8b5f] flex flex-col gap-3 pl-12 py-12 pr-8"
                 >
                   <div className="size-7 shrink-0">
@@ -65,7 +66,7 @@ export default function HowCareStarts() {
                   <p className="font-sans font-normal text-[16px] leading-[26px] text-[rgba(255,255,255,0.8)]">
                     {step.description}
                   </p>
-                </div>
+                </FadeIn>
               ))}
             </div>
           </div>

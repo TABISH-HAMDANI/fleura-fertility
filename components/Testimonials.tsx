@@ -1,4 +1,5 @@
 import FadeIn from "@/components/ui/FadeIn";
+import MotionCard from "@/components/ui/MotionCard";
 
 const testimonials = [
   {
@@ -51,7 +52,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
           {testimonials.map((t, i) => (
             <FadeIn key={t.name} delay={(i % 3) * 0.1}>
-              <div className="bg-white border border-black/10 rounded-2xl p-6 h-full flex flex-col hover:shadow-md transition-shadow duration-300">
+              <MotionCard className="bg-white border border-black/10 rounded-2xl p-6 h-full flex flex-col">
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <svg key={s} className="w-4 h-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
@@ -68,7 +69,7 @@ export default function Testimonials() {
                   <p className="font-sans font-semibold text-[13px] text-black">{t.name}</p>
                   <p className="font-sans text-[12px] text-gray mt-0.5">{t.type}</p>
                 </div>
-              </div>
+              </MotionCard>
             </FadeIn>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import FadeIn from "@/components/ui/FadeIn";
+import MotionCard from "@/components/ui/MotionCard";
 
 const services = [
   {
@@ -38,7 +39,7 @@ export default function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px]">
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.1}>
-              <div className="bg-white border border-black/[0.08] rounded-2xl pt-[33px] pb-[58px] px-px flex flex-col items-center text-center gap-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+              <MotionCard className="bg-white border border-black/[0.08] rounded-2xl pt-[33px] pb-[58px] px-px flex flex-col items-center text-center gap-5">
 
                 {/* Icon circle with cream bg */}
                 <div className="bg-[#f2ead5] rounded-full size-14 flex items-center justify-center shrink-0">
@@ -59,7 +60,7 @@ export default function Services() {
                 <p className="font-sans text-[14px] text-[#6e6e6e] leading-[22.75px] w-[161px]">
                   {service.description}
                 </p>
-              </div>
+              </MotionCard>
             </FadeIn>
           ))}
         </div>
