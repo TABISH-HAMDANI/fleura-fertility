@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-hedvig);
+
+  /* Exact section backgrounds */
+  --color-linen: #F2EAD5;          /* Hero · Learn · MeetDoctor */
+  --color-mist:  #E2E5DE;          /* Services · WhoIsFor · Testimonials */
+  --color-sage:  #8B8B5F;          /* HowCareStarts · Footer */
+  --color-peach: #DDA783;          /* ContactCTA */
+  --color-rust:  #B9794E;          /* Accent text · icons · service icons */
+  --color-rust-dark: #9A6035;
+
+  /* Typography */
+  --color-gray:  #6E6E6E;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gold:  #D4900A;
+
+  /* Aliases kept so existing class names still resolve */
+  --color-cream:        #F2EAD5;
+  --color-cream-light:  #E2E5DE;
+  --color-olive:        #8B8B5F;
+  --color-olive-dark:   #8B8B5F;
+  --color-terracotta:   #B9794E;
+  --color-terracotta-dark: #9A6035;
+  --color-stone:        #000000;
+  --color-stone-mid:    #6E6E6E;
+  --color-warm-border:  #E0D8D0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F2EAD5;
+  color: #000000;
 }
